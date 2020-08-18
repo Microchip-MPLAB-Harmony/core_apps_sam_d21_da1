@@ -77,7 +77,7 @@ The following table shows the target hardware for the application projects.
 6. LED indicates the periodic timer functionality
     - LED is toggled periodically every one second
 
-Refer to the following table for LED name:
+Refer to the following table for LED and Switch name:
 
 | Board | LED Name | Switch Name |
 | ----- | -------- | ----------- |
