@@ -1,6 +1,6 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# FAT filesystem using SPI driver with SDSPI Media
+# FAT filesystem using SPI driver with SD Card Media
 
 This application shows an example of using the MPLAB Harmony File System to access and modify the contents of a SD card using the SDSPI and a SPI driver
 
@@ -64,11 +64,11 @@ The following table shows the target hardware for the application projects.
 2. Press Switch to start the file operations
 3. The LED is turned ON if there was no error during creating the directory and copying the file into it
 
-    Refer to the following table for LED name:
+    Refer to the following table for LED and Switch name:
 
-    | Board | LED Name |
-    | ----- | -------- |
-    |  [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) | LED0 |
+    | Board | LED Name | Switch Name |
+    | ----- | -------- | ----------- |
+    |  [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) | LED0 | SW0 |
     |||
 
 4. If LED is ON, Insert the SD Card on to your host PC

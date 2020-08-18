@@ -1,6 +1,6 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# FAT filesystem using SD Card (SPI based) media
+# FAT filesystem using SD Card media
 
 This application shows an example of using the MPLAB Harmony File System to access and modify the contents of a SD card using the SDSPI driver and the SPI PLIB.
 
