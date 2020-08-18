@@ -65,36 +65,32 @@
 // *****************************************************************************
 // *****************************************************************************
 
-  
 /*** Macros for GPIO_PB12 pin ***/
 #define GPIO_PB12_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = 1 << 12)
 #define GPIO_PB12_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = 1 << 12)
 #define GPIO_PB12_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = 1 << 12)
-#define GPIO_PB12_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 12)) & 0x01)
 #define GPIO_PB12_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = 1 << 12)
 #define GPIO_PB12_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = 1 << 12)
+#define GPIO_PB12_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 12)) & 0x01)
 #define GPIO_PB12_PIN                  PORT_PIN_PB12
 
 /*** Macros for GPIO_PA17 pin ***/
 #define GPIO_PA17_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = 1 << 17)
 #define GPIO_PA17_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = 1 << 17)
 #define GPIO_PA17_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = 1 << 17)
-#define GPIO_PA17_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 17)) & 0x01)
 #define GPIO_PA17_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = 1 << 17)
 #define GPIO_PA17_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = 1 << 17)
+#define GPIO_PA17_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 17)) & 0x01)
 #define GPIO_PA17_PIN                  PORT_PIN_PA17
 
 /*** Macros for GPIO_PA20 pin ***/
 #define GPIO_PA20_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = 1 << 20)
 #define GPIO_PA20_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = 1 << 20)
 #define GPIO_PA20_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = 1 << 20)
-#define GPIO_PA20_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 20)) & 0x01)
 #define GPIO_PA20_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = 1 << 20)
 #define GPIO_PA20_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = 1 << 20)
+#define GPIO_PA20_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 20)) & 0x01)
 #define GPIO_PA20_PIN                  PORT_PIN_PA20
-
-
-
 // *****************************************************************************
 /* PORT Group
 
@@ -904,7 +900,7 @@ void PORT_GroupToggle(PORT_GROUP group, uint32_t mask);
     void PORT_GroupInputEnable(PORT_GROUP group, uint32_t mask)
 
   Summary:
-    Confgiures the selected IO pins of a group as input.
+    Configures the selected IO pins of a group as input.
 
   Description:
     This function configures the selected IO pins of a group as input. The pins
@@ -943,7 +939,7 @@ void PORT_GroupInputEnable(PORT_GROUP group, uint32_t mask);
     void PORT_GroupOutputEnable(PORT_GROUP group, uint32_t mask)
 
   Summary:
-    Confgiures the selected IO pins of a group as output.
+    Configures the selected IO pins of a group as output.
 
   Description:
     This function configures the selected IO pins of a group as output. The pins
