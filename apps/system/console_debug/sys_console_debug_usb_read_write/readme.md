@@ -90,10 +90,10 @@ The following table shows the target hardware for the application projects.
 
     ![usb_console_output_3](images/usb_console_output_3.png)
 
-Refer to the following table for LED name:
+Refer to the following table for LED and Switch name:
 
-| Board | LED Name |
-| ----- | -------- |
-|  [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) | LED0 |
-|  [SAM DA1 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMDA1-XPRO) | LED0 |
+| Board | LED Name | Switch Name |
+| ----- | -------- | ----------- |
+|  [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) | LED0 | SW0 |
+|  [SAM DA1 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMDA1-XPRO) | LED0 | SW0 |
 |||
