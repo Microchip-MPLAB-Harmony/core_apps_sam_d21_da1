@@ -7,17 +7,29 @@ has_toc: false
 
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# FreeRTOS basic
+## FreeRTOS basic
 
-This example application blinks an LED to show the FreeRTOS threads that are running and to indicate status.
+This example application demonstrates context switching between four tasks of different priorites. Two tasks run periodically while the other two tasks are event driven.
 
 ## Description
 
-This demonstration creates three tasks and a queue. Task1 sends message to Task2 and Task3 to unblock and toggle an LED. Task1 priority is low compared to Task2 and Task3 which shares same priority.
+This demonstration creates four tasks each of differen priority. Task1 has the lowest priority, followed by Task2, Task3 and Task4 which has the highest priority. Task1 and Task2 run periodically. 
 
-- **Task1**: This task sends the data (i.e. delay, the amount of time for which the task need blocked) to Task2 and Task3 using a queue, then Task1 blocks itself for 200ms to allow other tasks to schedule and run
-- **Task2**: This task blocks until it receives the data from queue, if the Task2 receives the expected delay (i.e. 1000ms) from Task1 then toggles the LED and blocks itself for the amount of delay received
-- **Task3**: This task blocks until it receives the data from queue, if the Task3 receives the expected delay (i.e. 100ms) from Task1 then toggles the LED and blocks itself for the amount of delay received
+Task3 blocks until a character is received on UART terminal. Task3 registers a read callback with the UART PLIB and blcoks on a UART receive semaphore. The semaphore is given from the registered callback which is called when a character is receved on the terminal. 
+
+Task4 blocks until a user switch is pressed. Task4 registers a callback for the switch press event with the PIO peripheral and then blocks on the switch press semaphore. The semaphore is given from the registered callback which is called when the switch is pressed.
+
+All the tasks print messages on the UART terminal to indicate tasks entry/exit. Since all the tasks use the same UART peripheral library, a mutex is used to guard the shared resource (UART ring buffer).
+
+
+- **Task1**: Task1 is configured for priority 1 (lowest of all the application tasks). The task1 runs for about 100 ticks and then blocks for 10 milliseconds. Each time task1 is run, it prints a message on the UART console "Tsk1-P1 <-" where, the <- symbol indicates that task1 is running. Just before blocking it prints another message on the UART console "Tsk1-P1 ->" where, the -> symbol indicates that task1 is about to put itself into a blocked state.
+- **Task2**: Task2 is configured for priority 2. The task2 runs for about 10 ticks and then blocks for 250 milliseconds. Each time task2 is run, it prints a message on the UART console "Tsk2-P2 <-" where, the <- symbol indicates that task2 is running. Just before blocking it prints another message on the UART console "Tsk2-P2 ->" where, the -> symbol indicates that task2 is about to put itself into a blocked state.
+- **Task3**: Task3 is configured for priority 3. It remains blocked on a semaphore which is released when a character is entered on the UART console. Once active, the task reads out the received characters and toggles LED if letter 'L' or 'l' is pressed. The task then runs for about 50 ticks, before again blocking itself until a new character is received. Each time task3 is run, it prints a message on the UART console "Tsk3-P3 <-" where, the <- symbol indicates that task2 is running. Just before blocking it prints another message on the UART console "Tsk3-P3 ->" where, the -> symbol indicates that task3 is about to put itself into a blocked state.
+- **Task4**: Task4 is configured for priority 4 (highest of all the application tasks). It remains blocked on a semaphore which is released when a user switch is pressed. Once active, the task runs for about 10 ticks, before again blocking itself until the switch is pressed again. Each time task4 is run, it prints a message on the UART console "Tsk4-P4 <-" where, the <- symbol indicates that task4 is running. Just before blocking it prints another message on the UART console "Tsk4-P4 ->" where, the -> symbol indicates that task4 is about to put itself into a blocked state.
+
+The following figure shows possible context switching between the tasks.
+
+   ![output](images/task_switching.png)
 
 ## Downloading and building the application
 
@@ -54,14 +66,38 @@ The following table shows the target hardware for the application projects.
 
 ## Running the Application
 
-1. Build and program the application using its IDE
-2. The LED indicates the success or failure.
-    - The LED toggles on success i.e. each time when the Task2 or Task3 receives a valid message
+1. Open the Terminal application (Ex.:Tera Term) on the computer.
+2. Connect to the EDBG Virtual COM port and configure the serial settings as follows:
 
-Refer to the following table for LED name:
+    Baud : 115200
 
-| Board | LED Name |
-| ----- | -------- |
-|  [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) | LED0 |
-|  [SAM DA1 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMDA1-XPRO) | LED0 |
+    Data : 8 Bits
+    
+    Parity : None
+    
+    Stop : 1 Bit
+    
+    Flow Control : None
+3. Build and program the application using its IDE.
+4. Observe the following output on the terminal.
+
+   ![output](images/output1.png)
+
+5. Enter any character on the terminal to run task3. Notice how task1 and task2 are pre-empted by task3 as task3 is of higher priority than task1 and task2. Pressing character 'l' or "L' toggles the on board LED. Notice how task1 and task2 are not run when characters are entered continuously on the terminal.
+
+   ![output](images/output2.png)
+
+   ![output](images/output2_1.png)
+
+6. Press the user switch on the board to run task4. Notice how task4 preempts all other tasks as it is of highest priority.
+
+   ![output](images/output3.png)
+
+
+Refer to the following table for LED and Switch name:
+
+| Board | LED Name | Switch Name |
+| ----- | -------- | -------- |
+|  [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) | LED0 | SW0 |
+|  [SAM DA1 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMDA1-XPRO) | LED0 | SW0 |
 |||

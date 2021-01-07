@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app2.c
+    task3.c
 
   Summary:
     This file contains the source code for the MPLAB Harmony application.
@@ -21,41 +21,16 @@
     files.
  *******************************************************************************/
 
-// DOM-IGNORE-BEGIN
-/*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
-*
-* Subject to your compliance with these terms, you may use Microchip software
-* and any derivatives exclusively with Microchip products. It is your
-* responsibility to comply with third party license terms applicable to your
-* use of third party software (including open source software) that may
-* accompany Microchip software.
-*
-* THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
-* EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
-* WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
-* PARTICULAR PURPOSE.
-*
-* IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
-* INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
-* WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
-* BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
-* FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
-* ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
-* THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *******************************************************************************/
-// DOM-IGNORE-END
-
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
 
-#include "app2.h"
-#include "queue.h"
-
+#include "task3.h"
+#include "definitions.h"
+#include "portmacro.h"
+#include <string.h>
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
@@ -72,24 +47,34 @@
     This structure holds the application's data.
 
   Remarks:
-    This structure should be initialized by the APP2_Initialize function.
+    This structure should be initialized by the TASK3_Initialize function.
 
     Application strings and buffers are be defined outside this structure.
 */
 
-APP2_DATA app2Data;
-/* The queue used by both tasks. */
-extern QueueHandle_t xQueue;
-
+TASK3_DATA task3Data;
+static SemaphoreHandle_t dataRxSemaphore;
+extern SemaphoreHandle_t uartMutexLock;
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
 // *****************************************************************************
 // *****************************************************************************
+void uartReadEventHandler(SERCOM_USART_EVENT event, uintptr_t context )
+{
+    if (event == SERCOM_USART_EVENT_READ_THRESHOLD_REACHED)
+    {
+        BaseType_t xHigherPriorityTaskWoken;
 
-/* TODO:  Add any necessary callback functions.
-*/
+        /* Unblock the task by releasing the semaphore. */
+        xSemaphoreGiveFromISR( dataRxSemaphore, &xHigherPriorityTaskWoken );
 
+        /* If xHigherPriorityTaskWoken was set to true you
+        we should yield */
+
+        portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
+    }
+}
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Local Functions
@@ -109,16 +94,16 @@ extern QueueHandle_t xQueue;
 
 /*******************************************************************************
   Function:
-    void APP2_Initialize ( void )
+    void TASK3_Initialize ( void )
 
   Remarks:
-    See prototype in app2.h.
+    See prototype in task3.h.
  */
 
-void APP2_Initialize ( void )
+void TASK3_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
-    app2Data.state = APP2_STATE_INIT;
+    task3Data.state = TASK3_STATE_INIT;
 
 
 
@@ -130,29 +115,57 @@ void APP2_Initialize ( void )
 
 /******************************************************************************
   Function:
-    void APP2_Tasks ( void )
+    void TASK3_Tasks ( void )
 
   Remarks:
-    See prototype in app2.h.
+    See prototype in task3.h.
  */
 
-void APP2_Tasks ( void )
+void TASK3_Tasks ( void )
 {
-    unsigned long ulReceivedValue = 0;
+    uint8_t readByte;
+    bool status = false;
+    TickType_t timeNow;
 
-    /* Wait until something arrives in the queue - this task will block
-     * indefinitely provided INCLUDE_vTaskSuspend is set to 1 in
-     * FreeRTOSConfig.h.
-     */
-    xQueueReceive( xQueue, &ulReceivedValue, portMAX_DELAY );
+    SERCOM3_USART_ReadCallbackRegister(uartReadEventHandler, 0);
+    SERCOM3_USART_ReadThresholdSet(1);
+    SERCOM3_USART_ReadNotificationEnable(true, false);
 
-    /* To get here something must have been received from the queue, but
-     * is it the expected value?  If it is, toggle the LED.
-     */
-    if( ulReceivedValue == 100UL )
+    dataRxSemaphore = xSemaphoreCreateBinary();
+
+    if (dataRxSemaphore != NULL)
     {
-        LED_TOGGLE();
-        vTaskDelay((TickType_t)ulReceivedValue);
+        status = true;
+    }
+
+    while (status == true)
+    {
+        /* Block until a character is received on the terminal */
+        if( xSemaphoreTake( dataRxSemaphore, portMAX_DELAY ) == pdTRUE )
+        {
+            /* Task3 is running (<-) now */
+            xSemaphoreTake(uartMutexLock, portMAX_DELAY);
+            SERCOM3_USART_Write((uint8_t*)"                      Tsk3-P3 <-\r\n", 34);
+            xSemaphoreGive(uartMutexLock);
+
+            /* Toggle an LED if character received is 'L' or 'l' */
+            while (SERCOM3_USART_Read(&readByte, 1) == true)
+            {
+                if (readByte == 'L' || readByte == 'l')
+                {
+                    LED_Toggle();
+                }
+            }
+
+            /* Work done by task3 for 50 ticks */
+            timeNow = xTaskGetTickCount();
+            while ((xTaskGetTickCount() - timeNow) < 50);
+
+            /* Task3 is exiting (->) now */
+            xSemaphoreTake(uartMutexLock, portMAX_DELAY);
+            SERCOM3_USART_Write((uint8_t*)"                      Tsk3-P3 ->\r\n", 34);
+            xSemaphoreGive(uartMutexLock);
+        }
     }
 }
 
