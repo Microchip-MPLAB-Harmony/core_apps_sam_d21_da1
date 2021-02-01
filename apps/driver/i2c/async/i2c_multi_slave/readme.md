@@ -73,4 +73,5 @@ The following table shows the target hardware for the application projects.
 3. Build and program the application using the MPLAB X IDE.
 4. Observe the temperature values getting printed on the terminal application every 1 second and temperature value written into EEPROM notification as shown below:
 5. Press any key on the terminal, last 5 temperature values will be read from the EEPROM and displayed as shown below:
+
   ![Output](images/output.png)
