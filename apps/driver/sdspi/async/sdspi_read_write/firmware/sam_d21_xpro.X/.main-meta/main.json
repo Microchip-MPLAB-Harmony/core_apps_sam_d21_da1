@@ -4,18 +4,18 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.core_apps_sam_d21_da1_driver_sdspi_async_sdspi_read_write_sam_d21_xpro",
-		"version": "3.0.1",
+		"version": "3.1.0",
 		"displayName": "SDSPI driver asynchronous - SDSPI Read Write Example for SAM D21/DA1 Family",
 		"projectName": "sdspi_read_write_sam_d21_xpro",
 		"shortDescription": "This example application shows how to use the SDSPI driver in asynchronous mode to perform non-blocking operations on the SD Card Media",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.40.0"
+			"semverRange": ">=5.45.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=2.40.0"
+				"semverRange": ">=2.50.0"
 			}
 		],
 		"dfp": {
@@ -24,7 +24,7 @@
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.5.1"
+			"semverRange": ">=3.7.0"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
@@ -39,13 +39,17 @@
 		"author": "Microchip",
 		"subcategories": [
 			[
-				"Development Kit", "SAM D21 Xplained Pro Evaluation Kit"
+				"Development Kit",
+				"SAM D21 Xplained Pro Evaluation Kit"
 			],
 			[
-				"Harmony", "Drivers", "SDSPI"
+				"Harmony",
+				"Drivers",
+				"SDSPI"
 			],
 			[
-				"Peripherals", "SDSPI"
+				"Peripherals",
+				"SDSPI"
 			]
 		],
 		"peripherals": [
