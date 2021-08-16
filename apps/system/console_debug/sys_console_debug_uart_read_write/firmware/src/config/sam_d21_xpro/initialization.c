@@ -167,7 +167,7 @@ const SYS_DEBUG_INIT debugInit =
 void SYS_Initialize ( void* data )
 {
 
-    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3);
+    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3UL);
 
   
     PORT_Initialize();
