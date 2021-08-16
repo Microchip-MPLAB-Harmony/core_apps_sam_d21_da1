@@ -21,6 +21,12 @@ children:
   - type: KeyValueSet
     attributes: {id: SERCOM_MODE}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: Dynamic
@@ -102,7 +108,7 @@ children:
       - type: Boolean
         attributes: {id: readOnly}
         children:
-        - {type: Value, value: 'true'}
+        - {type: Value, value: 'false'}
     - type: Values
       children:
       - type: Dynamic
@@ -137,6 +143,24 @@ children:
         attributes: {id: sercom4, value: '0'}
 - type: Attachments
   children:
+  - type: DirectCapability
+    attributes: {id: SERCOM4_I2C}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'false'}
+  - type: DirectCapability
+    attributes: {id: SERCOM4_SPI}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'false'}
   - type: DirectCapability
     attributes: {id: SERCOM4_UART}
     children:
