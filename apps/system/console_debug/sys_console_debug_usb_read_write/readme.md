@@ -48,10 +48,12 @@ The following table shows the target hardware for the application projects.
 ### Setting up [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
+- Connect the Target USB port on the board to the computer using a micro USB cable
 
 ### Setting up [SAM DA1 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMDA1-XPRO)
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
+- Connect the Target USB port on the board to the computer using a micro USB cable
 
 ## Running the Application
 
