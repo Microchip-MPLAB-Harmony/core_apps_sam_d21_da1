@@ -62,7 +62,7 @@
 */
 void SYS_DMA_AddressingModeSetup(SYS_DMA_CHANNEL channel, SYS_DMA_SOURCE_ADDRESSING_MODE sourceAddrMode, SYS_DMA_DESTINATION_ADDRESSING_MODE destAddrMode)
 {
-    uint32_t config;
+	uint32_t config;
 
     config = (uint32_t)DMAC_ChannelSettingsGet((DMAC_CHANNEL)channel);
     config &= ~(0x400 | 0x800);
@@ -84,7 +84,7 @@ void SYS_DMA_AddressingModeSetup(SYS_DMA_CHANNEL channel, SYS_DMA_SOURCE_ADDRESS
 */
 void SYS_DMA_DataWidthSetup(SYS_DMA_CHANNEL channel, SYS_DMA_WIDTH dataWidth)
 {
-    uint32_t config;
+	uint32_t config;
 
     config = (uint32_t)DMAC_ChannelSettingsGet((DMAC_CHANNEL)channel);
 
