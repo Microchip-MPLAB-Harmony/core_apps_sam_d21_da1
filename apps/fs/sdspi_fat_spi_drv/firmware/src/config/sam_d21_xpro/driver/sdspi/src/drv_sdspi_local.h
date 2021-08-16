@@ -54,7 +54,6 @@
 #include <stddef.h>
 
 #include "configuration.h"
-#include "system/dma/sys_dma.h"
 #include "driver/sdspi/drv_sdspi.h"
 #include "osal/osal.h"
 
@@ -455,8 +454,8 @@ typedef enum
 
 typedef enum
 {
-	/* Open the SPI Driver instance */
-	DRV_SDSPI_TASK_OPEN_SPI,
+    /* Open the SPI Driver instance */
+    DRV_SDSPI_TASK_OPEN_SPI,
 
     DRV_SDSPI_TASK_START_POLLING_TIMER,
 
@@ -745,6 +744,8 @@ typedef enum
     /* Check whether the card has been detached. */
     DRV_SDSPI_CMD_DETECT_CHECK_FOR_DETACH,
 
+    DRV_SDSPI_CMD_DETECT_CHECK_FOR_CMD_SEND,
+
     DRV_SDSPI_CMD_DETECT_CHECK_FOR_DETACH_READ_CID_DATA,
 
     DRV_SDSPI_CMD_DETECT_CHECK_FOR_DETACH_PROCESS_CID_DATA,
@@ -784,6 +785,8 @@ typedef enum
 
     /* Temporary state */
     DRV_SDSPI_CMD_CONFIRM_COMPLETE,
+
+    DRV_SDSPI_CMD_CONFIRM_EXEC_ERROR,
 
     /* Error state */
     DRV_SDSPI_CMD_EXEC_ERROR,

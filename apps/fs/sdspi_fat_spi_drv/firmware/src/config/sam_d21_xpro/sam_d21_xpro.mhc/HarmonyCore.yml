@@ -41,7 +41,7 @@ children:
           - type: Pair
             attributes: {description: 'FALSE', value: '0', key: ENABLE_SYS_PORTS}
           - type: Pair
-            attributes: {description: 'FALSE', value: '0', key: ENABLE_SYS_DMA}
+            attributes: {description: 'FALSE', value: '1', key: ENABLE_SYS_DMA}
           - type: Pair
             attributes: {description: 'FALSE', value: '0', key: ENABLE_SYS_RESET}
   - type: File
@@ -82,6 +82,24 @@ children:
         - {type: Value, value: 'true'}
   - type: File
     attributes: {id: DMA_SOURCE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+  - type: File
+    attributes: {id: DRIVER_COMMON}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+  - type: File
+    attributes: {id: DRIVER_ROOT}
     children:
     - type: Attributes
       children:
@@ -170,6 +188,15 @@ children:
       children:
       - type: Dynamic
         attributes: {id: drv_spi_0, value: 'true'}
+  - type: File
+    attributes: {id: GEN_APP_TASKS}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
   - type: Menu
     attributes: {id: GEN_APP_TASK_MENU}
     children:
@@ -280,6 +307,15 @@ children:
         - {type: Value, value: 'true'}
   - type: File
     attributes: {id: SYSTEM_COMMON}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+  - type: File
+    attributes: {id: SYSTEM_MEDIA}
     children:
     - type: Attributes
       children:
