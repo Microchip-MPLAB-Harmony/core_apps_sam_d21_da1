@@ -2,6 +2,6 @@
 <Package name="core_apps_sam_d21_da1">
     <Dependencies>
         <Dependency name="core" version="v3.10.0"/>
-        <Dependency name="usb" version="v3.7.2"/>
+        <Dependency name="usb" version="v3.8.0"/>
 </Dependencies>
 </Package>
