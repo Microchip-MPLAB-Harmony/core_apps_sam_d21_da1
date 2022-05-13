@@ -182,7 +182,6 @@ void SYS_Initialize ( void* data )
 	BSP_Initialize();
     NVMCTRL_Initialize( );
 
-    EVSYS_Initialize();
 
 
 
