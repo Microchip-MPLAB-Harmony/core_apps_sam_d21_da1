@@ -187,7 +187,6 @@ void SYS_Initialize ( void* data )
 
     SERCOM1_SPI_Initialize();
 
-    EVSYS_Initialize();
 
 
     sysObj.drvAT25 = DRV_AT25_Initialize(DRV_AT25_INDEX, (SYS_MODULE_INIT *)&drvAT25InitData);
