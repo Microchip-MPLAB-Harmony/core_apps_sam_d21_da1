@@ -182,11 +182,10 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize( );
 
-    EVSYS_Initialize();
-
-    TC3_TimerInitialize();
 
 	BSP_Initialize();
+    TC3_TimerInitialize();
+
 
 
     sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
