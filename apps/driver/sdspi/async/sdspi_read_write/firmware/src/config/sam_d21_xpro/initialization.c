@@ -241,9 +241,8 @@ void SYS_Initialize ( void* data )
 	BSP_Initialize();
     NVMCTRL_Initialize( );
 
-    EVSYS_Initialize();
-
     SERCOM0_SPI_Initialize();
+
 
     DMAC_Initialize();
 
