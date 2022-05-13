@@ -133,7 +133,7 @@ static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
 
 const DRV_USBFSV1_INIT drvUSBInit =
 {
-    /* Interrupt Source for USB module */
+    /* Interrupt Source for USB module */ 
     .interruptSource = USB_IRQn,
 
     /* System module initialization */
@@ -282,7 +282,6 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize( );
 
-    EVSYS_Initialize();
 
 	BSP_Initialize();
 
