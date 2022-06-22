@@ -8,6 +8,32 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 peripheral library application examples for SAM D21/DA1 family  v3.3.0
+
+### Development kit and demo application support
+
+Following table provides number of peripheral library examples available for different development kits.
+
+| Development Kits  | MPLAB X applications |
+|:-----------------:|:-------------------:|
+| [SAM DA1 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMDA1-XPRO) | 7 |
+| [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) | 15 |
+
+### New Features
+
+- None
+
+### Known Issues
+
+- Latest FatFs requires FAT image size to be atleast 64KB. As a result the demo is dropped as there is not enough Flash memory to support FAT image size of 64KB.
+
+### Development Tools
+
+- [MPLAB® X IDE v6.00](https://www.microchip.com/mplab/mplab-x-ide)
+- MPLAB® X IDE plug-ins:
+  - MPLAB® Code Configurator (MCC) v5.1.9
+- [MPLAB® XC32 C/C++ Compiler v4.10](https://www.microchip.com/mplab/compilers)
+
 ## Harmony 3 peripheral library application examples for SAM D21/DA1 family  v3.2.0
 
 ### Development kit and demo application support
