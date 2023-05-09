@@ -1,23 +1,23 @@
 /*******************************************************************************
-  Board Support Package Header File.
-
-  Company:
-    Microchip Technology Inc.
+ System Tasks Header File
 
   File Name:
-    bsp.h
+    sys_tasks.h
 
   Summary:
-    Board Support Package Header File 
+    This file contains declarations for task handles.
 
   Description:
-    This file contains constants, macros, type definitions and function
-    declarations 
-*******************************************************************************/
+    Task handles declared in this header file can be used by the application
+    to control the behavior of the tasks.
+
+  Remarks:
+    None
+ *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -37,11 +37,11 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef BSP_H
-#define BSP_H
+#ifndef SYS_TASKS_H
+#define SYS_TASKS_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -49,72 +49,27 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include "device.h"
+#include "configuration.h"
+#include "definitions.h"
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: BSP Macros
+// Section: RTOS "Tasks" Handles
 // *****************************************************************************
 // *****************************************************************************
-#define sam_d21_xpro
-#define BSP_NAME             "sam_d21_xpro"
+/* Declaration of  TASK1_Tasks task handle */
+extern TaskHandle_t xTASK1_Tasks;
+
+/* Declaration of  TASK2_Tasks task handle */
+extern TaskHandle_t xTASK2_Tasks;
+
+/* Declaration of  TASK3_Tasks task handle */
+extern TaskHandle_t xTASK3_Tasks;
+
+/* Declaration of  TASK4_Tasks task handle */
+extern TaskHandle_t xTASK4_Tasks;
 
 
 
-/*** LED Macros for LED ***/
-#define LED_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1UL << 30)
-#define LED_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1UL << 30)
-#define LED_Off()        (PORT_REGS->GROUP[1].PORT_OUTSET = 1UL << 30)
 
-
-
-
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Interface Routines
-// *****************************************************************************
-// *****************************************************************************
-
-// *****************************************************************************
-/* Function:
-    void BSP_Initialize(void)
-
-  Summary:
-    Performs the necessary actions to initialize a board
-
-  Description:
-    This function initializes the LED and Switch ports on the board.  This
-    function must be called by the user before using any APIs present on this
-    BSP.
-
-  Precondition:
-    None.
-
-  Parameters:
-    None
-
-  Returns:
-    None.
-
-  Example:
-    <code>
-    BSP_Initialize();
-    </code>
-
-  Remarks:
-    None
-*/
-
-void BSP_Initialize(void);
-
-#endif // BSP_H
-
-/*******************************************************************************
- End of File
-*/
+#endif //SYS_TASKS_H
