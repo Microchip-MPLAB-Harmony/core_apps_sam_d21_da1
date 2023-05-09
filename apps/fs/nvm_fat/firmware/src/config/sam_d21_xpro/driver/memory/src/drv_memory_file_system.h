@@ -1,21 +1,23 @@
-/*******************************************************************************
-  Board Support Package Header File.
+/******************************************************************************
+  MEMORY Driver File System Interface Implementation
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    bsp.h
+    drv_memory_file_system.h
 
   Summary:
-    Board Support Package Header File 
+    MEMORY Driver Interface Definition
 
   Description:
-    This file contains constants, macros, type definitions and function
-    declarations 
+    The MEMORY Driver provides a interface to access the MEMORY on the PIC32
+    microcontroller. This file implements the MEMORY Driver file system interface.
+    This file should be included in the project if MEMORY driver functionality with
+    File system is needed.
 *******************************************************************************/
 
-// DOM-IGNORE-BEGIN
+//DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -38,87 +40,42 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+//DOM-IGNORE-END
+#ifndef DRV_MEMORY_FILE_SYSTEM_H
+#define DRV_MEMORY_FILE_SYSTEM_H
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Include Files
+// *****************************************************************************
+// *****************************************************************************
+
+#include "driver/memory/src/drv_memory_local.h"
+#include "system/fs/sys_fs_media_manager.h"
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+    extern "C" {
+#endif
 // DOM-IGNORE-END
 
-#ifndef BSP_H
-#define BSP_H
-
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
+// Section: Global objects
 // *****************************************************************************
 // *****************************************************************************
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include "device.h"
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: BSP Macros
-// *****************************************************************************
-// *****************************************************************************
-#define sam_d21_xpro
-#define BSP_NAME             "sam_d21_xpro"
-
-
-
-/*** LED Macros for LED ***/
-#define LED_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1UL << 30)
-#define LED_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1UL << 30)
-#define LED_Off()        (PORT_REGS->GROUP[1].PORT_OUTSET = 1UL << 30)
-
-/*** SWITCH Macros for SWITCH ***/
-#define SWITCH_Get()     ((PORT_REGS->GROUP[0].PORT_IN >> 15) & 0x01)
-#define SWITCH_STATE_PRESSED   0
-#define SWITCH_STATE_RELEASED  1
-
-
-
 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface Routines
+// Section: MEMORY Driver File system interface Routines
 // *****************************************************************************
 // *****************************************************************************
 
-// *****************************************************************************
-/* Function:
-    void BSP_Initialize(void)
+void DRV_MEMORY_RegisterWithSysFs( const SYS_MODULE_INDEX drvIndex, uint8_t mediaType);
 
-  Summary:
-    Performs the necessary actions to initialize a board
+#ifdef __cplusplus
+}
+#endif
 
-  Description:
-    This function initializes the LED and Switch ports on the board.  This
-    function must be called by the user before using any APIs present on this
-    BSP.
-
-  Precondition:
-    None.
-
-  Parameters:
-    None
-
-  Returns:
-    None.
-
-  Example:
-    <code>
-    BSP_Initialize();
-    </code>
-
-  Remarks:
-    None
-*/
-
-void BSP_Initialize(void);
-
-#endif // BSP_H
-
-/*******************************************************************************
- End of File
-*/
+#endif //#ifndef DRV_MEMORY_FILE_SYSTEM_H
