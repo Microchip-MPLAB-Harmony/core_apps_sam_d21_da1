@@ -1,4 +1,4 @@
-<config configName="sam_da1_xpro" projectName="spi_self_loopback_multi_client_sam_da1_xpro" configVersion="1.1" device="ATSAMDA1J16B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
+<config configName="sam_da1_xpro" projectName="spi_self_loopback_multi_client_sam_da1_xpro" configVersion="1.1" device="ATSAMDA1J16B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -3477,7 +3477,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\debug\sys_debug.h</file>
-         <hash>222cdc284bd651e83188b9641cc57c133cf86563dbeb5d5523766d4a36087165</hash>
+         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\i2s.h</file>
@@ -3497,7 +3497,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\driver\spi\src\drv_spi_local.h</file>
-         <hash>71a1fa9ba0e3739cb5404dd272adbc0b1f3166fd4c744206830cbfe6919433d8</hash>
+         <hash>ad0de54fbffad399c5a1cf1b803300cb4e4cbf2d0e611387deec39c24ce74f4f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\dmac\plib_dmac.h</file>
@@ -3517,7 +3517,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\definitions.h</file>
-         <hash>774cf6f78e739072c47206e0d0978eef980dfdcfef6c858c0a8642b495472fee</hash>
+         <hash>0c61f293350640f8ed986f9a6c0f129a8175ce688577269e1db76812fb36b3a2</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm0plus.h</file>
@@ -3537,11 +3537,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\toolchain_specifics.h</file>
-         <hash>c93f9d68b1623668727be21b4449250a7e4a5d7040776d6f6d604a7528ffc9eb</hash>
+         <hash>a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\dmac\plib_dmac.c</file>
-         <hash>2f201d912637c747f560407ec52f197f0c09b62abee8bad94da77288f0f7b376</hash>
+         <hash>d96c364179e6e60621c52dceaf47b70edccb038ba58e3afd827cbfbf1c9ef798</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\pm.h</file>
@@ -3561,7 +3561,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\system_common.h</file>
-         <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
       </entry>
       <entry>
          <file>..\src\app_monitor.h</file>
@@ -3573,11 +3573,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\driver\spi\src\drv_spi.c</file>
-         <hash>5cde3539a30acc51a40714893ab50da0739304c81fbd4d6201f4bcb775534844</hash>
+         <hash>0882f1587b3c48b541a94f0255b942c7d61206dc1fa5d89c4ac2ed0d9a92cd3d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\interrupts.c</file>
-         <hash>b9bf21c502f0b270428caea92a87af7d1280007dad9da9a89830389fc47bc68b</hash>
+         <hash>e52f4020f7b43677b1a666bf101ba24a9dff53cb451cde7b332e332db62b2df8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\dmac.h</file>
@@ -3597,15 +3597,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\driver\spi\drv_spi_definitions.h</file>
-         <hash>c0bb59cb4e0db78819626219e773cea55748a8207b9afc31617e9af24662650d</hash>
+         <hash>ba06e15b49c559da9db2e2c1756bf29738c224a13a47fa77cd2722267fe3e68f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\exceptions.c</file>
-         <hash>cc07b84902bf881b410bee8cd4463b438ad2997c8fd8d3f308a16d926f75d601</hash>
+         <hash>3d788ce1bd25caaaf6b533ec5b06e4b1e753044c1a217dd5cdf8629628ae85a9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\dma\sys_dma.h</file>
-         <hash>84a40b4972b6e6ba60df4780d0d2f6867fb84f496a5621d80e6e96c42fa7c16e</hash>
+         <hash>c55258a896f6f017bf61aa76eca7602cc8162a984b0d440f79e8b6b4bb5818f1</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
@@ -3613,7 +3613,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\dma\sys_dma.c</file>
-         <hash>857103c3cdd998ea45f31516f435a01901a28afe894c8cce719240297d6c7546</hash>
+         <hash>b898eb7b174f17cd7dcaff8afef4fa2b878dcbc3b4db44b23810c78af55ffd6b</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
@@ -3645,7 +3645,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\configuration.h</file>
-         <hash>537a058af785f541bc24c5851526997dd8e198cefe899ab64b74aa3f424be9f9</hash>
+         <hash>370562f6c5970a95a29344e65c84235a706cbd2810199184c87271473e5d1134</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\component\evsys.h</file>
@@ -3669,7 +3669,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\osal\osal_impl_basic.h</file>
-         <hash>0c388837ef1d4e207a028ed31bfe07f1aac7ea8b0505caff58f737667ccbeaee</hash>
+         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
@@ -3677,15 +3677,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\sercom\spi_master\plib_sercom1_spi_master.h</file>
-         <hash>fae66f0919ce7ee73c63ec05c043fed931ff8c86453be94a82cdb90d777ce01b</hash>
+         <hash>27dba3e4bd95c522ba463d1d2b5030e81bd490055a73ae6d11fb41494d432f82</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\clock\plib_clock.c</file>
-         <hash>bba08adfb9caff585aa736a69b9efe24402b35ac97bc00b5854f248a93ff72e5</hash>
+         <hash>d1e7a687b9bc15463035301b0cb084134a7bb677a9304342aa1bcd18507a3d28</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\port\plib_port.c</file>
-         <hash>0f2f7bac0a9c11b859e2e73ab127cd75209a90cb480e07e22ae48390265cae4b</hash>
+         <hash>9e918c2d6e67e5d5053c7c7cc653465c109eeaf64756c8a08c0a04f671313ac6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\clock\plib_clock.h</file>
@@ -3705,7 +3705,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\sercom\spi_master\plib_sercom1_spi_master.c</file>
-         <hash>7acbcd19bbcade2bfd968533ba7489a3345eeb75e74f166fcf5d1578a78f82ab</hash>
+         <hash>d57eb437a69dbcbff4f824b8d56233511b5953f07cf32764d11228a5042164ae</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
@@ -3721,11 +3721,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\int\sys_int.h</file>
-         <hash>71e36331ee689ae305b3d8ec49948e3dde0324b65f51bf38f4472b900a421ed6</hash>
+         <hash>dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\startup_xc32.c</file>
-         <hash>d7ba451f4fffc267a5da6a83377b2b935a88cd73342f8a1f38ea8c39a86d963f</hash>
+         <hash>e6227d89e36b74af1bc21e00e80b390502c97aaaa65796291f63b2d96cf0678e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\component\gclk.h</file>
@@ -3737,7 +3737,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\int\src\sys_int.c</file>
-         <hash>23e798871ce6f7b4b0e0dbd5cb2cad7b43bd2dd1f38152f28d14f5a5b7a2938b</hash>
+         <hash>4281667cc2b84c9e4be1f0dfb3f7d42b77d36c5dcf6513d29ff40262f746cfc6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\component\mtb.h</file>
@@ -3757,7 +3757,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
-         <hash>d0cb51cdb15b1a54eb3842f7c3942c83da67c7c689cc7c194aa8e6f2a4e26653</hash>
+         <hash>e6c84ba6d927494c7cdb98103f53b0916b78ebbfb32d0de67f18fbc853a8f869</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\nvmctrl\plib_nvmctrl.h</file>
@@ -3777,7 +3777,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\driver\spi\drv_spi.h</file>
-         <hash>aed15b9971d20ddad5624af0d417eccb3d9acf31326b0d9ededffabb34c3ed15</hash>
+         <hash>9a6daa12b48114aa08202529bea2a2a3d9d98a4365d864f10380ad2244b139d2</hash>
       </entry>
       <entry>
          <file>..\src\app_client1.c</file>
@@ -3785,7 +3785,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\system_module.h</file>
-         <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\eic.h</file>
@@ -3845,7 +3845,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>6886078f548a7295bd3c1009cc84acdba11b72e6d2f2c60634239fdda3c6c513</hash>
+         <hash>ce4a171905fe10c6f41900aac4859b3b31e759e1eed9041d23235544b1b2eedc</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\mtb.h</file>
@@ -3881,15 +3881,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\bsp\bsp.h</file>
-         <hash>ac632e13295c22dd3d3c640d86d1393a5c55fb260a5c995fc93fdd144faaf1aa</hash>
+         <hash>7f2c1b5ddb692a40131a053d7ea0176f0d924b39bc442c097e2b2c93c95b3957</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\bsp\bsp.c</file>
          <hash>5cb21f9aaac63012c30d9eb9e34ab1e613e4c9f515cd7516cedbc9701ff6a16d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_da1_xpro\sys_tasks.h</file>
+         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\component\tc.h</file>
@@ -3901,7 +3905,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\pin_configurations.csv</file>
-         <hash>7e85dfff04f43a6c6eac97cf4f4271d95cec7a964d2e43e8cd4dc1f2372a76d1</hash>
+         <hash>9cd1a57815109353178b298a1b779081145738898aa717217f8c03de7f46c432</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\component\ac.h</file>
@@ -3921,7 +3925,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\osal\osal_definitions.h</file>
-         <hash>0a5ca28c4812bb37babfebc1fe30a90b13583504d81910ad159feb746a5b002c</hash>
+         <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\sercom4.h</file>
@@ -3941,11 +3945,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\dma\sys_dma_mapping.h</file>
-         <hash>f40fd52b9e96c213abb3996b309103da33f134a85f90c874a99d2184c61c0ece</hash>
+         <hash>ce3b0fb5a381953a0804e467742d198578a5abb4b419c667565553953c4d27c7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\initialization.c</file>
-         <hash>fc110a38cb87405446051e20a086356fe1f99e96deacc57ec9badcccd69cdc60</hash>
+         <hash>aaeaf3d99de64b023ceaeed70be7806e048ee8d43f604a70a7304081f0a33197</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\ATSAMDA1J16B.ld</file>
@@ -3973,7 +3977,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\int\sys_int_mapping.h</file>
-         <hash>660e7081f93de17660144721849acf269925988a4f6510028d25903aaa866ea1</hash>
+         <hash>5abf8528dabc1b17378f5d137870597037214fddf33880fa40e9263352da3008</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\component\adc.h</file>
@@ -3985,7 +3989,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\tasks.c</file>
-         <hash>902dabd39affe3718d91ccff6acf23b6a1b8f9568f2870f8df292c0c1e624fc2</hash>
+         <hash>51b9158f5dd28ee9672d4fef40f321c867b5a2db8f3eac9ca9417069e8edeb0b</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
