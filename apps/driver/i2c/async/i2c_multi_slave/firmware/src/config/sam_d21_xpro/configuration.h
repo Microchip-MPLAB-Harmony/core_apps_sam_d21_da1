@@ -88,10 +88,10 @@ extern "C" {
 #define SYS_TIME_CPU_CLOCK_FREQUENCY                (47972352)
 #define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (200)
 
-#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			1
-#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			1
-#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
-#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		200
+#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(2U)
+#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(0U)
+#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		(200U)
 
 
 #define SYS_CONSOLE_INDEX_0                       0
@@ -113,7 +113,7 @@ extern "C" {
 #define DRV_I2C_CLOCK_SPEED_IDX0              400
 
 /* I2C Driver Common Configuration Options */
-#define DRV_I2C_INSTANCES_NUMBER              1
+#define DRV_I2C_INSTANCES_NUMBER              (1U)
 
 
 
