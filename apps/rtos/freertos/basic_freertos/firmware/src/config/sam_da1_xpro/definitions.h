@@ -55,9 +55,9 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/eic/plib_eic.h"
-#include "bsp/bsp.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "bsp/bsp.h"
 #include "osal/osal.h"
 #include "task1.h"
 #include "task2.h"
@@ -73,6 +73,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "ATSAMDA1J16B"
+#define DEVICE_ARCH			 "CORTEX-M0PLUS"
+#define DEVICE_FAMILY		 "SAMD"
+#define DEVICE_SERIES		 "SAMDA1"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 48000000
