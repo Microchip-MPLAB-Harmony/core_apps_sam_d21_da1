@@ -1,4 +1,4 @@
-<config configName="sam_da1_xpro" projectName="sys_console_debug_usb_read_write_sam_da1_xpro" configVersion="1.1" device="ATSAMDA1J16B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
+<config configName="sam_da1_xpro" projectName="sys_console_debug_usb_read_write_sam_da1_xpro" configVersion="1.1" device="ATSAMDA1J16B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -67,7 +67,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2658,7 +2658,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\debug\sys_debug.h</file>
-         <hash>222cdc284bd651e83188b9641cc57c133cf86563dbeb5d5523766d4a36087165</hash>
+         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\usb\usb_device_cdc.h</file>
@@ -2678,7 +2678,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\debug\src\sys_debug.c</file>
-         <hash>a19e5c5741fd049ca223b71314015cdb48f5750b92cd7d159eedb4da486d863b</hash>
+         <hash>474ee981d4285453a2ae9f1e4735c40129281931b89f579c3c413acdff1d8d26</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\sercom3.h</file>
@@ -2710,7 +2710,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\definitions.h</file>
-         <hash>0aaadc4ab0f6e4a1d388906cbe73bd2c10d6ebfacad7adb2db929fb6483ff967</hash>
+         <hash>6207e03b1e0425809aeaf62366ff9e12400b9d678ce838419dcd6edebfe7d6e7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\driver\usb\usbfsv1\src\drv_usbfsv1_device.c</file>
@@ -2726,7 +2726,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\console\src\sys_console.c</file>
-         <hash>40aa2013385ec344c267d5779ef941d663ecc0739ebe962ad906324e71666c43</hash>
+         <hash>622a27844a650b4fa265c7a4739ba3768a76e4148600be42e44eec2e0673d7c6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\component\port.h</file>
@@ -2738,7 +2738,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\toolchain_specifics.h</file>
-         <hash>c93f9d68b1623668727be21b4449250a7e4a5d7040776d6f6d604a7528ffc9eb</hash>
+         <hash>a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\pm.h</file>
@@ -2778,7 +2778,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\system_common.h</file>
-         <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
       </entry>
       <entry>
          <file>..\src\app.h</file>
@@ -2790,7 +2790,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\interrupts.c</file>
-         <hash>0947edfc386fa3c08a7ca90fdf871d28b50d9a1557fea73d59bc3eecf9e3b9db</hash>
+         <hash>98dfc3d569822eb14a437d2e183bc2c24c9e539765c0fb1a175a446365becfcf</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\dmac.h</file>
@@ -2818,7 +2818,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\exceptions.c</file>
-         <hash>cc07b84902bf881b410bee8cd4463b438ad2997c8fd8d3f308a16d926f75d601</hash>
+         <hash>3d788ce1bd25caaaf6b533ec5b06e4b1e753044c1a217dd5cdf8629628ae85a9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\usb\src\usb_device_cdc_local.h</file>
@@ -2858,7 +2858,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\configuration.h</file>
-         <hash>930bce212a003067801b5398af2ecd597f1791a53ee6076f38e3b1d556f7fa85</hash>
+         <hash>4bc68c447a3f7cfead815ced41a825976af5e1520f750c82af1b5b37265d4109</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\component\evsys.h</file>
@@ -2890,7 +2890,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\osal\osal_impl_basic.h</file>
-         <hash>0c388837ef1d4e207a028ed31bfe07f1aac7ea8b0505caff58f737667ccbeaee</hash>
+         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
@@ -2898,11 +2898,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\clock\plib_clock.c</file>
-         <hash>fc56b8b1031610df67e3ff6b99fe90b8effd6e34d59bf419dcb3e22360548f89</hash>
+         <hash>a22f578825f83ea0d5feae46e6b2d44c6d0fce8b712f7f515119485f25a8abf7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\port\plib_port.c</file>
-         <hash>0bc4462d4de15ba28928d19d8d0e55c81e1256b34da635403a3c6a4d7b84d3d2</hash>
+         <hash>6adf1d7e14c4a0b0350af2983a00cd3ca79d3e0179b5e1e59752019e75444477</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\clock\plib_clock.h</file>
@@ -2926,7 +2926,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\usb_device_init_data.c</file>
-         <hash>19f0fc4d64544db50232b44f860a39d09dbea2042882a559212c8cd9022edb58</hash>
+         <hash>8cd1931923f2035b8d10c3a13cf05ddb74b6e1e51df619116589adbcdc8cf59f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\usb\usb_common.h</file>
@@ -2942,11 +2942,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\int\sys_int.h</file>
-         <hash>71e36331ee689ae305b3d8ec49948e3dde0324b65f51bf38f4472b900a421ed6</hash>
+         <hash>dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\startup_xc32.c</file>
-         <hash>d7ba451f4fffc267a5da6a83377b2b935a88cd73342f8a1f38ea8c39a86d963f</hash>
+         <hash>e6227d89e36b74af1bc21e00e80b390502c97aaaa65796291f63b2d96cf0678e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\driver\usb\drv_usb.h</file>
@@ -2962,7 +2962,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\int\src\sys_int.c</file>
-         <hash>23e798871ce6f7b4b0e0dbd5cb2cad7b43bd2dd1f38152f28d14f5a5b7a2938b</hash>
+         <hash>4281667cc2b84c9e4be1f0dfb3f7d42b77d36c5dcf6513d29ff40262f746cfc6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\debug\src\sys_debug_local.h</file>
@@ -2982,7 +2982,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
-         <hash>d0cb51cdb15b1a54eb3842f7c3942c83da67c7c689cc7c194aa8e6f2a4e26653</hash>
+         <hash>e6c84ba6d927494c7cdb98103f53b0916b78ebbfb32d0de67f18fbc853a8f869</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\nvmctrl\plib_nvmctrl.h</file>
@@ -2998,7 +2998,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\system_module.h</file>
-         <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\eic.h</file>
@@ -3062,7 +3062,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>6617d3633e7ef95681739b53b2eb740e732662b0a5f5e05ad87dde90417f7d29</hash>
+         <hash>56a881b819f15a0f818a71bfc91e7975666cc09c4a541df1a9bc917e1e16ea05</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\mtb.h</file>
@@ -3098,15 +3098,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\bsp\bsp.h</file>
-         <hash>ac632e13295c22dd3d3c640d86d1393a5c55fb260a5c995fc93fdd144faaf1aa</hash>
+         <hash>7f2c1b5ddb692a40131a053d7ea0176f0d924b39bc442c097e2b2c93c95b3957</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\bsp\bsp.c</file>
          <hash>5cb21f9aaac63012c30d9eb9e34ab1e613e4c9f515cd7516cedbc9701ff6a16d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_da1_xpro\sys_tasks.h</file>
+         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\component\tc.h</file>
@@ -3122,7 +3126,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\pin_configurations.csv</file>
-         <hash>bcbf5c4a998c3564442eb7fd1f610536f669529993a487ef3c397e655700cdb2</hash>
+         <hash>59552091f0a80fc372016c06954c3965c49a5f548d1d2198d7b19453536c1c8e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\usb\usb_device.h</file>
@@ -3142,7 +3146,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\console\src\sys_console_usb_cdc.c</file>
-         <hash>43c034e1349211dccf52a3f7d341bc0b21539a07aba529491c95c8875faf455d</hash>
+         <hash>a841978f6234c7fc7e5c0fa8dd03425ef103a75bf44371c6c0cea81c3b2afc4b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\component\pm.h</file>
@@ -3158,7 +3162,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\osal\osal_definitions.h</file>
-         <hash>0a5ca28c4812bb37babfebc1fe30a90b13583504d81910ad159feb746a5b002c</hash>
+         <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\instance\sercom4.h</file>
@@ -3178,7 +3182,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\console\sys_console.h</file>
-         <hash>e8a97986345fb2c80389834b113384eba523837ee43f7798d9b56be630a6e7b3</hash>
+         <hash>359158d1b9c3d3c6ff27965f2d49ff84c2835a4cb248fa82686a1a01bbc06670</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\console\src\sys_console_usb_cdc_definitions.h</file>
@@ -3186,7 +3190,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\initialization.c</file>
-         <hash>7796696845b49b7ce419a9843b26aef366fa62d52fb288b008232536a8b0cf10</hash>
+         <hash>d8ce4b96c01ea9570475162d00884c289933df49b6b13f9a4a3943ed56acbcf9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\usb\src\usb_device_cdc.c</file>
@@ -3218,7 +3222,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\system\int\sys_int_mapping.h</file>
-         <hash>660e7081f93de17660144721849acf269925988a4f6510028d25903aaa866ea1</hash>
+         <hash>5abf8528dabc1b17378f5d137870597037214fddf33880fa40e9263352da3008</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMDA1J16B_DFP\component\adc.h</file>
@@ -3230,7 +3234,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_da1_xpro\tasks.c</file>
-         <hash>888483db9ce944c5f6ca5fc6105f1c059332284b60fbfaa989a3aac3d36d6051</hash>
+         <hash>580dd4f2ab72368ebab2c13e3a25454f10dab609c8723f7e0b404c59699990d6</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
