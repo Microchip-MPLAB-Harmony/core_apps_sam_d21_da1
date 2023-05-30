@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.core_apps_sam_d21_da1_driver_usart_async_usart_multi_instance_sam_d21_xpro",
-		"version": "3.2.0",
+		"version": "3.4.0",
 		"displayName": "USART driver asynchronous - USART multi instance Example for SAM D21/DA1 Family",
 		"projectName": "async_usart_multi_instance_sam_d21_xpro",
 		"shortDescription": "This example echoes the received characters over the two consoles using the USART driver in asynchronous mode.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.0.0"
+			"semverRange": ">=6.5.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.1.0"
+				"semverRange": ">=4.21.0"
 			}
 		],
 		"dfp": {
-			"name": "CMSIS",
-			"semverRange": "^5.4.0"
+			"name": "SAMD21_DFP",
+			"semverRange": "^3.6.144"
 		},
 		"configurator": {
-			"name": "MHC",
-			"semverRange": ">=3.8.5"
+			"name": "MCC",
+			"semverRange": ">=5.3.0"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

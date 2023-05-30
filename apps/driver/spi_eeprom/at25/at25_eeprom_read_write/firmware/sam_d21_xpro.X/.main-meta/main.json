@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.core_apps_sam_d21_da1_driver_spi_eeprom_at25_at25_eeprom_read_write_sam_d21_xpro",
-		"version": "3.2.0",
+		"version": "3.4.0",
 		"displayName": "SPI EEPROM AT25 driver - EEPROM Read Write Example for SAM D21/DA1 Family",
 		"projectName": "at25_eeprom_read_write_sam_d21_xpro",
 		"shortDescription": "This example application shows how to use the AT25 driver to perform read and write operations on AT25 series of EEPROM.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.0.0"
+			"semverRange": ">=6.5.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.1.0"
+				"semverRange": ">=4.21.0"
 			}
 		],
 		"dfp": {
 			"name": "SAMD21_DFP",
-			"semverRange": "^3.3.98"
+			"semverRange": "^3.6.144"
 		},
 		"configurator": {
-			"name": "MHC",
-			"semverRange": ">=3.8.5"
+			"name": "MCC",
+			"semverRange": ">=5.3.0"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
