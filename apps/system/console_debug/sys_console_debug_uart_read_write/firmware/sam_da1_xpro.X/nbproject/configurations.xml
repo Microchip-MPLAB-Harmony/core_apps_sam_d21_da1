@@ -62,6 +62,7 @@
           <itemPath>../src/config/sam_da1_xpro/configuration.h</itemPath>
           <itemPath>../src/config/sam_da1_xpro/interrupts.h</itemPath>
           <itemPath>../src/config/sam_da1_xpro/device_vectors.h</itemPath>
+          <itemPath>../src/config/sam_da1_xpro/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
