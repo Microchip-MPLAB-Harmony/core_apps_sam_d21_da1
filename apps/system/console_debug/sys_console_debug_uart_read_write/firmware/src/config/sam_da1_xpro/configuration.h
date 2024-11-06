@@ -80,7 +80,7 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
-#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(2U)
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
 #define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(0U)
 #define SYS_CONSOLE_PRINT_BUFFER_SIZE        		(200U)
 
