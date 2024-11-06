@@ -60,11 +60,13 @@
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/message_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_syscall_numbers.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="portable" projectFiles="true">
             <logicalFolder name="f1" displayName="GCC" projectFiles="true">
               <logicalFolder name="f1" displayName="ARM_CM0" projectFiles="true">
                 <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h</itemPath>
+                <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0/portasm.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -220,6 +222,7 @@
             <logicalFolder name="f1" displayName="GCC" projectFiles="true">
               <logicalFolder name="f1" displayName="ARM_CM0" projectFiles="true">
                 <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0/port.c</itemPath>
+                <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0/portasm.c</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="f2" displayName="MemMang" projectFiles="true">
@@ -252,7 +255,7 @@
         <targetPluginBoard/>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.21</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
