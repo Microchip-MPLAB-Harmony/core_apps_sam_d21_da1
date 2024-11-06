@@ -88,7 +88,7 @@ extern "C" {
 #define SYS_FS_AUTOMOUNT_ENABLE           false
 #define SYS_FS_MAX_FILES                  (1U)
 #define SYS_FS_MAX_FILE_SYSTEM_TYPE       (1U)
-#define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512)
+#define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
 #define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (2048U)
 #define SYS_FS_USE_LFN                    (1)
 #define SYS_FS_FILE_NAME_LEN              (255U)
@@ -116,8 +116,8 @@ extern "C" {
 /* Memory Driver Instance 0 Configuration */
 #define DRV_MEMORY_INDEX_0                   0
 #define DRV_MEMORY_CLIENTS_NUMBER_IDX0       1
-#define DRV_MEMORY_BUFFER_QUEUE_SIZE_IDX0    1
-#define DRV_MEMORY_DEVICE_START_ADDRESS      0x20000
+#define DRV_MEMORY_BUF_Q_SIZE_IDX0    1
+#define DRV_MEMORY_DEVICE_START_ADDRESS      0x20000U
 #define DRV_MEMORY_DEVICE_MEDIA_SIZE         128UL
 #define DRV_MEMORY_DEVICE_MEDIA_SIZE_BYTES   (DRV_MEMORY_DEVICE_MEDIA_SIZE * 1024U)
 #define DRV_MEMORY_DEVICE_PROGRAM_SIZE       64U
