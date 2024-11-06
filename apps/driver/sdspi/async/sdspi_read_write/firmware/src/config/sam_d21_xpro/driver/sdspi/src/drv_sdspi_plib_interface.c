@@ -562,7 +562,7 @@ bool DRV_SDSPI_SPISpeedSetup(
     DRV_SDSPI_TRANSFER_SETUP setupRemap;
 
     /* SD Card reads the data on the rising edge of SCK, which means SPI Mode 0
-     * and 3 => CPOL = 0, CPHA = 0 and CPOL = 1, CPHA = 1 are supported */   
+     * and 3 => CPOL = 0, CPHA = 0 and CPOL = 1, CPHA = 1 are supported */
 
     setupRemap.baudRateInHz = clockFrequency;
 
